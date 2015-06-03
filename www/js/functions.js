@@ -99,7 +99,7 @@
 
               //
               if(user.status == ter){
-                  
+                  $( ".btn" ).remove();
                   document.getElementById("myDiv").style.backgroundColor = "red";
 
                   $( '<a class="btn" ui-sref="app.login2" icon-off="ion-ios7-filing-outline" href="#/app/login2"> Ga door </a>' ).appendTo( "#myDiv" );
@@ -108,6 +108,7 @@
               
               else{
                   //   alert("You're not very lucky today...");
+                  $( ".btn" ).remove();
                   document.getElementById("myDiv").style.backgroundColor = "blue";
 
 
