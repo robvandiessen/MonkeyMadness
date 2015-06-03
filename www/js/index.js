@@ -94,7 +94,8 @@ angular.module('ionicApp', ['ionic'])
 })
 
 .controller('LoginCtrl', function($scope) {
-  console.log('LoginCtrl');
+  drawRouletteWheel();
+  
 });
 
 

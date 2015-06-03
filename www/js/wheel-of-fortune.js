@@ -1,6 +1,6 @@
 	console.log('JavaScript Wheel of Fortune is ingeladen');
 	
-$(function() {
+
 	var colors = ["#fdc731", "#00d0f5", "#ff7663", "#fdc731",
                "#00d0f5", "#ff7663"];
 	  var opdrachten = 
@@ -29,10 +29,6 @@ $(function() {
 	  
 	  var ctx;
 
-	  function test(){
-	  	console.log('test');
-	  }
-	  
 	  function drawRouletteWheel() {
 	    var canvas = document.getElementById("wheelcanvas");
 	    if (canvas.getContext) {
@@ -126,7 +122,7 @@ $(function() {
 	    return b+c*(tc + -3*ts + 3*t);
 	  }
 	  
-}	  
+	  
 
 
 
