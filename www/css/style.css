@@ -1,0 +1,12 @@
+.bar-subheader.has-tabs-top{
+  top:93px !important;
+}
+
+.has-subheader.has-tabs-top{
+  top:137px;
+}
+
+#myDiv 
+{
+  	border: thick solid blue;
+}

@@ -1,0 +1,77 @@
+<ion-view view-title="Welcome">
+        <ion-content style="margin-left:50px">
+          <h1>Welcome Page</h1>
+          
+           <h3>switch</h3>
+           
+          
+          <div class="switch">
+       <label>
+        Off
+        <input type="checkbox" ng-model="data.switcher">
+        <span class="lever"></span>
+        On
+    </label>
+  </div>
+           </br>
+         </br>
+          
+          <li class="item  item-icon-left switch" >
+                    <i class="icon settings-wm-ion-icon ion-android-share"></i>
+                    Share availability
+                   
+                    <label style="position: absolute;right: 12px;z-index: 3;">
+                        {{(data.switcher) ? 'On': 'Off'}}
+                        <input type="checkbox" ng-model="data.switcher">
+                        <span class="lever"></span>
+                       
+                    </label>
+                
+
+                </li>
+          
+          
+          </br>
+          <pre>data.switcher: {{data.switcher|json}}</pre>
+        
+        </br>
+      <h3>checkboxes</h3>
+  
+      
+      
+  <p ng-repeat=" ch in data.checkboxes">
+    <input type="checkbox" id="{{ch.name}}"  ng-model="ch.value"/>
+    <label for="{{ch.name}}">{{ch.name}}</label>
+  </p>
+      
+      </br>
+          <pre>data.checkboxes: {{data.checkboxes|json}}</pre>
+    
+    </br>
+  
+  <p ng-repeat=" rd in data.radios">
+    <input type="radio"  name="radios" id="{{rd.name}}" value="{{rd.name}}"  ng-model="data.radioSelected">
+    <label  for="{{rd.name}}">{{rd.name}}</label>
+   
+  </p>
+      
+      </br>
+          <pre>data.radioSelected: {{data.radioSelected|json}}</pre>
+      
+ <!-- <p>
+    <input type="checkbox" id="test6" checked="checked" />
+    <label for="test6">Yellow</label>
+  </p>
+  <p>
+    <input type="checkbox" id="test7" checked="data.checkbox.green.value"  />
+    <label for="test7">Green</label>
+  </p>
+    <p>
+      <input type="checkbox" id="test8" disabled="disabled" />
+      <label for="test8">Brown</label>
+  </p>
+-->
+      
+        
+        </ion-content>
+      </ion-view>
