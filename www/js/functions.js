@@ -1,6 +1,6 @@
 // Prompt the user for a name to use.
 	function myFunction() {
-		name = prompt("Your name?", "Guest");
+		
 	
 	
 	
@@ -52,7 +52,7 @@
           // store dataSnapshot for use in below examples.
           fredSnapshot = dataSnapshot.numChildren();
 
-          myUserRef.set({ name: name, status: dataSnapshot.numChildren() + 1});
+          myUserRef.set({  status: dataSnapshot.numChildren() + 1});
 
 
 
@@ -67,7 +67,7 @@
 
           $("<div/>")
                   .attr("id", getMessageId(snapshot))
-                  .text(user.name + " is currently " + user.status)
+                  .text(" Speler " + user.status)
                   .appendTo("#presenceDiv");
 
 
@@ -134,7 +134,7 @@
           userListRef.on("child_changed", function(snapshot) {
               var user = snapshot.val();
               $("#presenceDiv").children("#" + getMessageId(snapshot))
-                      .text(user.name + " is currently " + user.status);
+                      .text(" Spelers " + user.status);
 
 
 
