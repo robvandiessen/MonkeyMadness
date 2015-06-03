@@ -1,6 +1,6 @@
 // Prompt the user for a name to use.
 	function myFunction() {
-		
+		name = prompt("Your name?", "Guest");
 	
 	
 	
@@ -52,7 +52,7 @@
           // store dataSnapshot for use in below examples.
           fredSnapshot = dataSnapshot.numChildren();
 
-          myUserRef.set({  status: dataSnapshot.numChildren() + 1});
+          myUserRef.set({ name: name, status: dataSnapshot.numChildren() + 1});
 
 
 
@@ -67,24 +67,24 @@
 
           $("<div/>")
                   .attr("id", getMessageId(snapshot))
-                  .text(" Speler " + user.status)
+                  .text(user.name + " is currently " + user.status)
                   .appendTo("#presenceDiv");
 
 
 
           // Get a database reference to our posts
-          var ref = new Firebase("https://scorching-torch-6903.firebaseio.com/random/number");
+          var ref = new Firebase("https://scorching-torch-6903.firebaseio.com/random/number/");
           // Attach an asynchronous callback to read the data at our posts reference
           ref.on("value", function(snapshot) {
 
-              var ter = snapshot.val();
+              ter = snapshot.val();
 
-
+              console.log(ter);
 
           $("#strookje").click( function() {
 
 
-
+       
 
 
 
@@ -99,18 +99,20 @@
 
               //
               if(user.status == ter){
-                  //    alert("Lucky 7!");
+                  
                   document.getElementById("myDiv").style.backgroundColor = "red";
 
-                  $( '<a class="btn" ui-sref="app.login2" icon-off="ion-ios7-filing-outline" href="#/app/login2"> Ga door </a>' ).appendTo( ".container" );
+                  $( '<a class="btn" ui-sref="app.login2" icon-off="ion-ios7-filing-outline" href="#/app/login2"> Ga door </a>' ).appendTo( "#myDiv" );
 
-              }else{
+              }
+              
+              else{
                   //   alert("You're not very lucky today...");
                   document.getElementById("myDiv").style.backgroundColor = "blue";
 
 
               }
-
+              
 
 
               });
@@ -134,7 +136,7 @@
           userListRef.on("child_changed", function(snapshot) {
               var user = snapshot.val();
               $("#presenceDiv").children("#" + getMessageId(snapshot))
-                      .text(" Spelers " + user.status);
+                      .text(user.name + " is currently " + user.status);
 
 
 

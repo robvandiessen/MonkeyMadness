@@ -10,3 +10,8 @@
 {
   	border: thick solid blue;
 }
+
+.btn-disabled
+{
+	display: none;
+}
