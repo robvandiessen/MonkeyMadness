@@ -1,5 +1,11 @@
 // Prompt the user for a name to use.
-      var name = prompt("Your name?", "Guest");
+	function myFunction() {
+		name = prompt("Your name?", "Guest");
+	
+	
+	
+	
+      //var name = prompt("Your name?", "Guest");
       var currentStatus = "? online";
 
       // Get a reference to the presence data in Firebase.
@@ -75,7 +81,7 @@
 
 
 
-          $("button").click( function() {
+          $("#strookje").click( function() {
 
 
 
@@ -152,6 +158,7 @@
           });
 
 
-
+          
       });
       });
+}
