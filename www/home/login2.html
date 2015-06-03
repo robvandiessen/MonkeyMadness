@@ -1,8 +1,13 @@
 <ion-view view-title="Login 2">
         <ion-content>
-
-          <h1>Test Page 2</h1>
-          <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
-          <a class="btn" ui-sref="app.start" icon-off="ion-ios7-filing-outline"> TERUG </a>
+        	<a class="btn" ui-sref="app.start" icon-off="ion-ios7-filing-outline"> TERUG </a>
+          <h1>Rad van Schaamte</h1>
+          <button class="button button-full button-positive nieuwe-game" onclick="spin()">
+			SPIN
+		</button>	
+		
+		<canvas id="wheelcanvas" width="500" height="500"></canvas>
+		<p id="uitleg-opdracht"> </p>
+          
         </ion-content>
       </ion-view>
