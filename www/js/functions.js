@@ -1,7 +1,7 @@
-function myFunction() {
+function geefLotNummer() {
     
     // Prompt the user for a name to use.
-		name = prompt("Your name?", "Guest");
+		//name = prompt("Your name?", "Guest");
 	
 	 
 	
@@ -53,7 +53,7 @@ function myFunction() {
           // store dataSnapshot for use in below examples.
           fredSnapshot = dataSnapshot.numChildren();
 
-          myUserRef.set({ name: name, status: dataSnapshot.numChildren() + 1});
+          myUserRef.set({status: dataSnapshot.numChildren() + 1});
 
 
 
@@ -68,7 +68,7 @@ function myFunction() {
 
           $("<div/>")
                   .attr("id", getMessageId(snapshot))
-                  .text(user.name + " is currently " + user.status)
+                  //.text( " Lot " + user.status) //EVENTUEEL NOG TOEVOEGEN!!
                   .appendTo("#presenceDiv");
 
 
@@ -100,16 +100,18 @@ function myFunction() {
 
               //
               if(user.status == ter){
-                  $( ".btn" ).remove();
-                  document.getElementById("myDiv").style.backgroundColor = "red";
-
-                  $( '<a class="btn" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel"> Ga door </a>' ).appendTo( "#myDiv" );
+                  $( "#btnCheck" ).remove();
+                  $('#StartContainer').removeClass('NeutraalLot');
+                  $('#StartContainer').addClass('HelaasLot');
+                  $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnCheck" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel" onclick="speelGeluid()""> Ga door </a>' ).appendTo( "#myDiv" );
 
               }
               
               else{
-                  //   alert("You're not very lucky today...");
-                  $( ".btn" ).remove();
+
+                  $( "#btnCheck" ).remove();
+                  $('#StartContainer').removeClass('NeutraalLot');
+                  $('#StartContainer').addClass('VeiligLot');
                   document.getElementById("myDiv").style.backgroundColor = "blue";
 
 
@@ -138,7 +140,7 @@ function myFunction() {
           userListRef.on("child_changed", function(snapshot) {
               var user = snapshot.val();
               $("#presenceDiv").children("#" + getMessageId(snapshot))
-                      .text(user.name + " is currently " + user.status);
+                      .text(" Lot " + user.status);
 
 
 

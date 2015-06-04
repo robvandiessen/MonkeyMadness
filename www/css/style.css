@@ -3,6 +3,7 @@
 /* LIGHT YELLOW = class: yellow;
 /* DARK YELLOW = class: yellow darken-3;
 /* BLACK = class: darken-4;
+/* LIGHT GREEN = class: light-green lighten-4;
 
 
 /* HEAD BAR */
@@ -11,6 +12,13 @@
 	background-color: #8bc34a;
 	border: none;
   	background-image: linear-gradient(0deg, #8bc34a, #8bc34a 50%, transparent 50%);
+}
+
+#invisibleHeader
+{
+  width: 100%;
+  height: 44px;
+  background-color: red;
 }
 
 /* TAB NAVIGATION */
@@ -26,7 +34,7 @@
 
 .bar.bar-positive
 {
-	background-color: red;
+	background-color: transparent;
 }
 
 /* HOME */
@@ -34,22 +42,71 @@
 {
 	background-image: url(../img/HOME-bg.jpg);
 	width: 100%;
-  	height: 335px;
-  	background-size: cover;
-  	background-position: center;
-  	background-repeat: no-repeat;
+  height: 335px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #btnNieuwSpel
 {
 	width: 90%;
-  	padding-bottom: 40px;
-  	padding-top: 5px;
-  	font-size: 25px;
-  	font-family: 'Roboto';
-  	font-weight: 900;
-  	margin-top: 10%;
-  	border-bottom: solid 4px #FFC82C;
+  padding-bottom: 40px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  margin-top: 5%;
+  border-bottom: solid 4px #FFC82C;
+}
+
+/* START SPEL */
+#strookje
+{
+  width: 250px;
+  height: 250px;
+  border-radius: 150px;
+  position: static;
+  margin-top: 100px;
+}
+
+#btnCheck
+{
+  margin-top: 50px;
+  width: 90%;
+  padding-bottom: 40px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  border-bottom: solid 4px #FFC82C;
+}
+
+.NeutraalLot
+{
+  background-image: url(../img/START-bg.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.VeiligLot 
+{
+  background-image: url(../img/START-bg-veilig.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.HelaasLot 
+{
+  background-image: url(../img/START-bg-helaas.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* RAD VAN SCHAAMTE */
@@ -58,6 +115,50 @@
     display:block;
     width:100%;
 } 
+
+#wheelBackground
+{
+  background-image: url(../img/WHEEL-wheel-bg.png);
+  width: 100%;
+  height: 402px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -390px;
+}
+
+#WheelTitle
+{
+  font-size: 35px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#btnSpinWheel
+{
+  width: 90%;
+  padding-bottom: 40px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-style: italic;
+  border-bottom: solid 4px #FFC82C;
+}
+
+#btnToonOpdracht
+{
+  width: 90%;
+  padding-bottom: 40px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  border-bottom: solid 4px #FFC82C;
+}
 
 
 
