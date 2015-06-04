@@ -6,6 +6,8 @@ angular.module('ionicApp', ['ionic'])
   //$ionicConfigProvider.views.transition('android');
 
   $stateProvider
+
+  /* SIDEMENU NAVIGATIE */
   .state('app', {
     url: "/app",
     abstract: true,
@@ -13,36 +15,37 @@ angular.module('ionicApp', ['ionic'])
     controller: 'AppCtrl'
   })
 
-  .state('app.welcome', {
-    url: "/welcome",
+  .state('app.mexen', {
+    url: "/mexen",
     views: {
       'menuContent': {
-        templateUrl: "welcome.html",
-        controller: 'WelcomeCtrl'
+        templateUrl: "sidemenu/mexen.html",
+        controller: 'MexenCtrl'
       }
     }
   })
 
-  .state('app.start', {
-    url: "/start",
+  .state('app.spelregels', {
+    url: "/spelregels",
     views: {
       'menuContent': {
-        templateUrl: "home/start.html", //templates
-        controller: 'LoginCtrl'
+        templateUrl: "sidemenu/spelregels.html",
+        controller: 'SpelregelsCtrl'
       }
     }
   })
 
-  .state('app.login2', {
-    url: "/login2",
+  .state('app.contact', {
+    url: "/contact",
     views: {
       'menuContent': {
-        templateUrl: "home/login2.html", //templates
-        controller: 'LoginCtrl'
+        templateUrl: "sidemenu/contact.html",
+        controller: 'ContactCtrl'
       }
     }
   })
 
+  /* TAB NAVIGATIE */
   .state('app.tabs', {
     url: "/tabs",
     abstract: true,
@@ -80,6 +83,88 @@ angular.module('ionicApp', ['ionic'])
     }
   })
 
+  /* HOME/RAD VAN SCHAAMTE NAVIGATIE */
+  .state('app.start', {
+    url: "/start",
+    views: {
+      'menuContent': {
+        templateUrl: "home/start.html", //templates
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+
+  .state('app.wheel', {
+    url: "/wheel",
+    views: {
+      'menuContent': {
+        templateUrl: "home/wheel.html", //templates
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+
+  /* OPDRACHTEN NAVIGATIE */
+  .state('app.opdracht1', {
+    url: "/opdracht1",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht1.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
+  .state('app.opdracht2', {
+    url: "/opdracht2",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht2.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
+  .state('app.opdracht3', {
+    url: "/opdracht3",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht3.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
+  .state('app.opdracht4', {
+    url: "/opdracht4",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht4.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
+  .state('app.opdracht5', {
+    url: "/opdracht5",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht5.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
+  .state('app.opdracht6', {
+    url: "/opdracht6",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/opdracht6.html", //templates
+        controller: 'OpdrachtCtrl'
+      }
+    }
+  })
+
   $urlRouterProvider.otherwise("/app/tabs/home");
   //$ionicConfigProvider.views.maxCache(0);
 })
@@ -88,14 +173,33 @@ angular.module('ionicApp', ['ionic'])
   console.log('AppCtrl');
 })
 
-.controller('WelcomeCtrl', function($scope) {
-  console.log('WelcomeCtrl');
+.controller('MexenCtrl', function($scope) {
+  console.log('MexenCtrl');
   
 })
 
-.controller('LoginCtrl', function($scope) {
-  drawRouletteWheel();
+.controller('SpelregelsCtrl', function($scope) {
+  console.log('SpelregelsCtrl');
   
+})
+
+.controller('ContactCtrl', function($scope) {
+  console.log('ContactCtrl');
+  
+})
+
+.controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
+  drawRouletteWheel();
+
+  /*
+  $scope.toonOpdracht = function(){
+
+    $ionicPopup.alert({
+       title: 'Don\'t eat that!',
+       template: 'It might taste good'
+     });
+  }
+  */
 });
 
 

@@ -1,8 +1,9 @@
-// Prompt the user for a name to use.
-	function myFunction() {
+function myFunction() {
+    
+    // Prompt the user for a name to use.
 		name = prompt("Your name?", "Guest");
 	
-	
+	 
 	
 	
       //var name = prompt("Your name?", "Guest");
@@ -102,7 +103,7 @@
                   $( ".btn" ).remove();
                   document.getElementById("myDiv").style.backgroundColor = "red";
 
-                  $( '<a class="btn" ui-sref="app.login2" icon-off="ion-ios7-filing-outline" href="#/app/login2"> Ga door </a>' ).appendTo( "#myDiv" );
+                  $( '<a class="btn" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel"> Ga door </a>' ).appendTo( "#myDiv" );
 
               }
               

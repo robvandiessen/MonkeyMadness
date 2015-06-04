@@ -1,17 +1,63 @@
-.bar-subheader.has-tabs-top{
-  top:93px !important;
-}
+/* MONKEY MADNESS NON MATERIALIZE CSS OR IONIC APP STYLES */
 
-.has-subheader.has-tabs-top{
-  top:137px;
-}
+/* LIGHT YELLOW = class: yellow;
+/* DARK YELLOW = class: yellow darken-3;
+/* BLACK = class: darken-4;
 
-#myDiv 
+
+/* HEAD BAR */
+#bar-main
 {
-  	border: thick solid blue;
+	background-color: #8bc34a;
+	border: none;
+  	background-image: linear-gradient(0deg, #8bc34a, #8bc34a 50%, transparent 50%);
 }
 
-.btn-disabled
+/* TAB NAVIGATION */
+.tab-item
 {
-	display: none;
+	background-color: #8bc34a;
 }
+
+.tab-item .icon
+{
+	color: #ffffff;
+}
+
+.bar.bar-positive
+{
+	background-color: red;
+}
+
+/* HOME */
+#homeHeader
+{
+	background-image: url(../img/HOME-bg.jpg);
+	width: 100%;
+  	height: 335px;
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+}
+
+#btnNieuwSpel
+{
+	width: 90%;
+  	padding-bottom: 40px;
+  	padding-top: 5px;
+  	font-size: 25px;
+  	font-family: 'Roboto';
+  	font-weight: 900;
+  	margin-top: 10%;
+  	border-bottom: solid 4px #FFC82C;
+}
+
+/* RAD VAN SCHAAMTE */
+#wheelcanvas
+{
+    display:block;
+    width:100%;
+} 
+
+
+

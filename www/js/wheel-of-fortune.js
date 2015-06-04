@@ -1,23 +1,29 @@
 	console.log('JavaScript Wheel of Fortune is ingeladen');
-	
-
 	var colors = ["#fdc731", "#00d0f5", "#ff7663", "#fdc731",
                "#00d0f5", "#ff7663"];
 	  var opdrachten = 
-	  [	"Na-apen", 
-	  	"Bier halen", 
-	  	"Lichaam van Christus", 
-	  	"Toiletpas",
-	   	"Yoga alfabet", 
-	   	"Dronken test"];
+	  [	"opdracht 1", 
+	  	"opdracht 2", 
+	  	"opdracht 3", 
+	  	"opdracht 4",
+	   	"opdracht 5", 
+	   	"opdracht 6"];
+
+	  var opdrachtnummers = 
+	  [	"opdracht1", 
+	  	"opdracht2", 
+	  	"opdracht3", 
+	  	"opdracht4",
+	   	"opdracht5", 
+	   	"opdracht6"];
 
 	  var opdracht_uitleg = 
-	  [	"NA-APEN, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam. ", 
-	  	"BIER HALEN, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
-	  	"LICHAAM VAN CHRISTUS, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
-	  	"TOILETPAS, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.",
-	   	"YOGA ALFABET, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
-	   	"DRONKEN TEST, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam."];
+	  [	"OPDRACHT 1, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam. ", 
+	  	"OPDRACHT 2, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
+	  	"OPDRACHT 3, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
+	  	"OPDRACHT 4, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.",
+	   	"OPDRACHT 5, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam.", 
+	   	"OPDRACHT 6, Proin ut quam eros. Donec sed lobortis diam. Nulla nec odio lacus. Quisque porttitor egestas dolor in placerat. Nunc vehicula dapibus ipsum. Duis venenatis risus non nunc fermentum dapibus. Morbi lorem ante, malesuada in mollis nec, auctor nec massa. Aenean tempus dui eget felis blandit at fringilla urna ultrices. Suspendisse feugiat, ante et viverra lacinia, lectus sem lobortis dui, ultricies consectetur leo mauris at tortor. Nunc et tortor sit amet orci consequat semper. Nulla non fringilla diam."];
 	  
 	  var startAngle = 0;
 	  var arc = Math.PI / 3;
@@ -76,9 +82,10 @@
 	  }
 	  
 	  function spin() {
-	    spinAngleStart = Math.random() * 10 + 10;
+	  	$( "#btnSpinWheel" ).remove();
+	    spinAngleStart = Math.random() * 40 + 10; // SPEED WHEEL
 	    spinTime = 0;
-	    spinTimeTotal = Math.random() * 3 + 4 * 1000;
+	    spinTimeTotal = Math.random() * 3 + 4 * 2000; // DURATION WHEEL
 	    rotateWheel();
 
 	  }
@@ -104,15 +111,69 @@
 	    ctx.save();
 	    ctx.font = "35px open sans";
 
-	    /*
-	    var text = opdrachten[index] 
-	    ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
-	    */
+	    //var text = opdrachten[index] 
+	    //ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
+	    
 
 	    ctx.restore();
-	    var element = document.getElementById("uitleg-opdracht");
-		element.innerHTML = 
-		'<h1>' + opdrachten[index] + '</h1>' + '<p>' + opdracht_uitleg[index] + '</p>'
+
+	    console.log(opdrachten[index]);
+
+	    
+	    if(opdrachtnummers[0] == opdrachtnummers[index]){
+
+	    	$( "#btnToonOpdracht" ).remove();
+	    	$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
+
+       	
+       	if(opdrachten[1] == opdrachten[index]){
+
+       		$( "#btnToonOpdracht" ).remove();
+       		$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
+
+       	if(opdrachten[2] == opdrachten[index]){
+
+			$( "#btnToonOpdracht" ).remove();
+			$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
+
+       	if(opdrachten[3] == opdrachten[index]){
+
+       		console.log(index[0]);
+
+			$( "#btnToonOpdracht" ).remove();
+			$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
+
+       	if(opdrachten[4] == opdrachten[index]){
+
+       		console.log(index[0]);
+
+			$( "#btnToonOpdracht" ).remove();
+			$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
+
+       	if(opdrachten[5] == opdrachten[index]){
+
+       		console.log(index[0]);
+
+			$( "#btnToonOpdracht" ).remove();
+			$("#WheelTitle").html(opdrachten[index]);
+			$( '<a class="btn" id="btnToonOpdracht" href="#/app/' + opdrachtnummers[index] + '">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
+
+       	}
 
 	  }
 	  
