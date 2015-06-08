@@ -103,7 +103,7 @@ function geefLotNummer() {
                   $( "#btnCheck" ).remove();
                   $('#StartContainer').removeClass('NeutraalLot');
                   $('#StartContainer').addClass('HelaasLot');
-                  $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnCheck" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel" onclick="speelGeluid()""> Ga door </a>' ).appendTo( "#myDiv" );
+                  $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnCheck" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel" > Ga door </a>' ).appendTo( "#myDiv" );
 
               }
               

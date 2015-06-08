@@ -105,62 +105,82 @@ angular.module('ionicApp', ['ionic'])
   })
 
   /* OPDRACHTEN NAVIGATIE */
-  .state('app.opdracht1', {
-    url: "/opdracht1",
+  .state('app.categorie1', {
+    url: "/categorie1",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht1.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie1.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
 
-  .state('app.opdracht2', {
-    url: "/opdracht2",
+  .state('app.categorie2', {
+    url: "/categorie2",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht2.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie2.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
 
-  .state('app.opdracht3', {
-    url: "/opdracht3",
+  .state('app.categorie3', {
+    url: "/categorie3",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht3.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie3.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
 
-  .state('app.opdracht4', {
-    url: "/opdracht4",
+  .state('app.categorie4', {
+    url: "/categorie4",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht4.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie4.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
 
-  .state('app.opdracht5', {
-    url: "/opdracht5",
+  .state('app.categorie5', {
+    url: "/categorie5",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht5.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie5.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
 
-  .state('app.opdracht6', {
-    url: "/opdracht6",
+  .state('app.categorie6', {
+    url: "/categorie6",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/opdracht6.html", //templates
-        controller: 'OpdrachtCtrl'
+        templateUrl: "home/opdrachten/categorie6.html", //templates
+        controller: 'CategorieCtrl'
+      }
+    }
+  })
+
+  .state('app.categorie7', {
+    url: "/categorie7",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/categorie7.html", //templates
+        controller: 'CategorieCtrl'
+      }
+    }
+  })
+
+  .state('app.categorie8', {
+    url: "/categorie8",
+    views: {
+      'menuContent': {
+        templateUrl: "home/opdrachten/categorie8.html", //templates
+        controller: 'CategorieCtrl'
       }
     }
   })
@@ -188,18 +208,23 @@ angular.module('ionicApp', ['ionic'])
   
 })
 
+.controller('CategorieCtrl', function($scope) {
+  console.log('CategorieCtrl');
+  
+})
+
+
 .controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
-  drawRouletteWheel();
-
+  
   /*
-  $scope.toonOpdracht = function(){
-
-    $ionicPopup.alert({
-       title: 'Don\'t eat that!',
-       template: 'It might taste good'
-     });
-  }
+  drawRouletteWheel();
+  
+  $ionicPopup.alert({
+    title: 'Zet nu je geluid aan!',
+    template: 'voor de ultieme beleving'
+  });
   */
+  
 });
 
 

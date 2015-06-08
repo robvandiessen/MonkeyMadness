@@ -14,7 +14,7 @@
 	var colors = ["#689f38", "#8bc34a", "#dcedc8", "#689f38",
                "#8bc34a", "#dcedc8"];
 	  var opdrachten = 
-	  [	"Na apen", "Bier halen", "opdracht 3", "opdracht 4","opdracht 5", "opdracht 6"];
+	  [	"Gorilla", "Chimpanzee", "opdracht 3", "opdracht 4","opdracht 5", "opdracht 6"];
 
 	  var opdrachtnummers = 
 	  [	"opdracht1", 
@@ -34,6 +34,37 @@
 	  
 	  var ctx;
 
+	  	var img1=new Image();
+		img1.onload=start;
+		img1.src="../img/HOME-bg.jpg";
+
+		var img2=new Image();
+		img2.onload=start;
+		img2.src="../img/START-bg-veilig.jpg";
+
+		var img3=new Image();
+		img3.onload=start;
+		img3.src="https://dl.dropboxusercontent.com/u/139992952/multple/mm.jpg";
+
+		var img4=new Image();
+		img4.onload=start;
+		img4.src="https://dl.dropboxusercontent.com/u/139992952/stackoverflow/water1.jpg";
+
+		var imgCount=4;
+
+	  function start(){
+		  if(--imgCount>0){return;}
+		  pattern1=ctx.createPattern(img1,'no-repeat');
+		  pattern2=ctx.createPattern(img2,'no-repeat');
+		  pattern3=ctx.createPattern(img3,'repeat');
+		  pattern4=ctx.createPattern(img4,'no-repeat');
+		  draw();
+		}
+
+		function draw() {
+		  drawRouletteWheel();
+		}
+
 	  function drawRouletteWheel() {
 	    var canvas = document.getElementById("wheelcanvas");
 	    if (canvas.getContext) {
@@ -45,17 +76,16 @@
 	      ctx.clearRect(0,0,500,500);
 	      
 	      ctx.font = "16px roboto";
-	      
+
 	      //in de for loop, i < 12 wordt aantal partities gewijzigd
 	      for(var i = 0; i < 6; i++) {
 	        var angle = startAngle + i * arc;
-	        ctx.fillStyle = colors[i];
+	        ctx.fillStyle = (i/2==parseInt(i/2))?pattern2:pattern1;//colors[i];
 	        
 	        ctx.beginPath();
 	        ctx.arc(250, 250, outsideRadius, angle, angle + arc, false);
 	        ctx.arc(250, 250, insideRadius, angle + arc, angle, true);
 	        ctx.fill();
-	        
 	        ctx.save();
 	        ctx.fillStyle = "#262626";
 	        ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 250 + Math.sin(angle + arc / 2) * textRadius);
