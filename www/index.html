@@ -14,13 +14,18 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/eersteLot.js"></script>
+    <script type="text/javascript" src="js/nieuwLot2.js"></script>
+
 
     <script type="text/javascript" src="http://code.ionicframework.com/1.0.0-beta.13/js/ionic.bundle.js"></script>
     <script src='https://cdn.rawgit.com/Dogfalo/materialize/master/dist/js/materialize.js'></script>
     <script type="text/javascript" src="js/wheel.js"></script>
+    <script type="text/javascript" src="js/opdrachten.js"></script>
     <script type="text/javascript" src="js/materialize-functions.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/maaklobby.js"></script>
+    <script type="text/javascript" src="js/joinlobby.js"></script>
 
   </head>
 
@@ -36,7 +41,9 @@
           <ion-nav-bar class="bar-positive" id="bar-main"> 
 
             <ion-nav-buttons side="right"> 
-              <a href="#/home" class="button button-icon nav-clear ion-ios7-home-outline"></a>
+              <a href="#/home" class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIcon"></a>
+              <a class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIconFake" onclick="Materialize.toast('Helaas! Gij zult deelnemen!', 4000)"></a>
+
             </ion-nav-buttons>
 
             <ion-nav-buttons side="left">
@@ -93,13 +100,15 @@
       </ion-tabs>
     </script>
 
-    <!-- TAB HOME -->
+    <!-- <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.start" onclick="geefLotNummer(); ">Nieuw spel</a> -->
     <script id="templates/tabs-home.html" type="text/ng-template">
       <ion-view view-title="home" >
         <ion-content>
-          <div id="homeHeader"></div>
+          <img src="img/HOME-bg.jpg" class="responsive-image">
           <div class="center-align">
-            <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.start" onclick="geefLotNummer()">Nieuw spel</a>
+            
+            <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.lobbyadmin">Nieuw spel</a>
+            <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.deelnemen">Spel deelnemen</a>
           </div>
 
         </ion-content>

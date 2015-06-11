@@ -94,22 +94,42 @@ angular.module('ionicApp', ['ionic'])
     }
   })
 
+  .state('app.lobbyadmin', {
+          url: "/lobbyadmin",
+          views: {
+              'menuContent': {
+                  templateUrl: "home/lobbyadmin.html", //templates
+                  controller: 'LobbyMakenCtrl'
+              }
+          }
+      })
+
+  .state('app.deelnemen', {
+          url: "/deelnemen",
+          views: {
+              'menuContent': {
+                  templateUrl: "home/deelnemen.html", //templates
+                  controller: 'LobbyDeelnameCtrl'
+              }
+          }
+      })
+
   .state('app.wheel', {
     url: "/wheel",
     views: {
       'menuContent': {
         templateUrl: "home/wheel.html", //templates
-        controller: 'HomeCtrl'
+        controller: 'WheelCtrl'
       }
     }
   })
 
-  /* OPDRACHTEN NAVIGATIE */
+  /* CATEGORIEEN NAVIGATIE */
   .state('app.categorie1', {
     url: "/categorie1",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/categorie1.html", //templates
+        templateUrl: "home/categorieen/categorie1.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -119,7 +139,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie2",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/categorie2.html", //templates
+        templateUrl: "home/categorieen/categorie2.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -129,7 +149,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie3",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/categorie3.html", //templates
+        templateUrl: "home/categorieen/categorie3.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -139,47 +159,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie4",
     views: {
       'menuContent': {
-        templateUrl: "home/opdrachten/categorie4.html", //templates
-        controller: 'CategorieCtrl'
-      }
-    }
-  })
-
-  .state('app.categorie5', {
-    url: "/categorie5",
-    views: {
-      'menuContent': {
-        templateUrl: "home/opdrachten/categorie5.html", //templates
-        controller: 'CategorieCtrl'
-      }
-    }
-  })
-
-  .state('app.categorie6', {
-    url: "/categorie6",
-    views: {
-      'menuContent': {
-        templateUrl: "home/opdrachten/categorie6.html", //templates
-        controller: 'CategorieCtrl'
-      }
-    }
-  })
-
-  .state('app.categorie7', {
-    url: "/categorie7",
-    views: {
-      'menuContent': {
-        templateUrl: "home/opdrachten/categorie7.html", //templates
-        controller: 'CategorieCtrl'
-      }
-    }
-  })
-
-  .state('app.categorie8', {
-    url: "/categorie8",
-    views: {
-      'menuContent': {
-        templateUrl: "home/opdrachten/categorie8.html", //templates
+        templateUrl: "home/categorieen/categorie4.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -208,23 +188,48 @@ angular.module('ionicApp', ['ionic'])
   
 })
 
-.controller('CategorieCtrl', function($scope) {
-  console.log('CategorieCtrl');
-  
-})
-
-
-.controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
-  
-  /*
-  drawRouletteWheel();
-  
+.controller('WheelCtrl', function($scope, $ionicPopup, $timeout) {
+  console.log('WheelCtrl');
+  spinButton();
+  speelGeluid();
   $ionicPopup.alert({
     title: 'Zet nu je geluid aan!',
     template: 'voor de ultieme beleving'
   });
-  */
+
+  
+})
+
+.controller('CategorieCtrl', function($scope) {
+  console.log('CategorieCtrl');
+
+  speelGeluidOpdracht();
+  toonCategorie1();
+  toonCategorie2();
+  toonCategorie3();
+  toonCategorie4();
+  stopGeluid();
+})
+
+.controller('LobbyMakenCtrl', function($scope) {
+  console.log('LobbyMakenCtrl');
+  maakLobby();
+  
+})
+
+.controller('LobbyDeelnameCtrl', function($scope) {
+  console.log('LobbyDeelnameCtrl');
+  
+})
+
+
+
+.controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
+  //maakLobby();
+  //testTest();
   
 });
+
+
 
 
