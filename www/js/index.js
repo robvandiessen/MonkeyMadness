@@ -20,7 +20,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/welkom",
     views: {
         'menuContent': {
-          templateUrl: "START/welkom.html", //templates
+          templateUrl: "welkom.html", //templates
           controller: 'StartCtrl'
         }
       }
@@ -30,7 +30,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/uitleg1",
     views: {
         'menuContent': {
-          templateUrl: "START/uitleg1.html", //templates
+          templateUrl: "uitleg1.html", //templates
           controller: 'StartCtrl'
         }
       }
@@ -41,7 +41,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/mexen",
     views: {
       'menuContent': {
-        templateUrl: "SIDEMENU/mexen.html",
+        templateUrl: "sidemenu/mexen.html",
         controller: 'MexenCtrl'
       }
     }
@@ -51,7 +51,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/spelregels",
     views: {
       'menuContent': {
-        templateUrl: "SIDEMENU/spelregels.html",
+        templateUrl: "sidemenu/spelregels.html",
         controller: 'SpelregelsCtrl'
       }
     }
@@ -61,7 +61,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/contact",
     views: {
       'menuContent': {
-        templateUrl: "SIDEMENU/contact.html",
+        templateUrl: "sidemenu/contact.html",
         controller: 'ContactCtrl'
       }
     }
@@ -111,7 +111,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/start",
     views: {
       'menuContent': {
-        templateUrl: "HOME/start.html", //templates
+        templateUrl: "home/start.html", //templates
         controller: 'RadCtrl'
       }
     }
@@ -121,7 +121,7 @@ angular.module('ionicApp', ['ionic'])
           url: "/lobbyadmin",
           views: {
               'menuContent': {
-                  templateUrl: "HOME/lobbyadmin.html", //templates
+                  templateUrl: "home/lobbyadmin.html", //templates
                   controller: 'LobbyMakenCtrl'
               }
           }
@@ -131,7 +131,7 @@ angular.module('ionicApp', ['ionic'])
           url: "/deelnemen",
           views: {
               'menuContent': {
-                  templateUrl: "HOME/deelnemen.html", //templates
+                  templateUrl: "home/deelnemen.html", //templates
                   controller: 'LobbyDeelnameCtrl'
               }
           }
@@ -152,7 +152,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie1",
     views: {
       'menuContent': {
-        templateUrl: "HOME/CATEGORIEEN/categorie1.html", //templates
+        templateUrl: "home/categorieen/categorie1.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -162,7 +162,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie2",
     views: {
       'menuContent': {
-        templateUrl: "HOME/CATEGORIEEN/categorie2.html", //templates
+        templateUrl: "home/categorieen/categorie2.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -172,7 +172,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie3",
     views: {
       'menuContent': {
-        templateUrl: "HOME/CATEGORIEEN/categorie3.html", //templates
+        templateUrl: "home/categorieen/categorie3.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -182,7 +182,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie4",
     views: {
       'menuContent': {
-        templateUrl: "HOME/CATEGORIEEN/categorie4.html", //templates
+        templateUrl: "home/categorieen/categorie4.html", //templates
         controller: 'CategorieCtrl'
       }
     }
