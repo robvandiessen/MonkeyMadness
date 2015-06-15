@@ -2,10 +2,10 @@
 <widget id="edu.fontys.media.monkeymadness" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>TestApp</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Durf jij het aan?
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="robvdiessen@gmail.com" href="www.robvandiessen.nl">
+      By Rob van Diessen &amp; Mathijs van der Palen
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -15,7 +15,7 @@
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="SplashScreenDelay" value="4500"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

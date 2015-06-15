@@ -3,19 +3,40 @@ function geefNieuwLotNummer() {
     $('#StartContainer').removeClass('VeiligLot');
     $('#StartContainer').addClass('NeutraalLot');
     $('#btnOpnieuw').remove();
-    
+    $( '<button onclick="geefLotNummer()" class="hideItem waves-effect grey-text text-darken-4 light-green lighten-4 btn" id="btnOpnieuw"> Opnieuw </button>' ).appendTo( "#myDiv" );
 
-    
+    var fredRef = new Firebase('https://scorching-torch-6903.firebaseio.com/');
+     lobby = sessionStorage.getItem('lobby');
+    console.log(lobby);
+    name = lobby;
+
+
+
+      fredRef.once('value', function(dataSnapshot) {
+          alert('fredRef ingeladen?!');
+          // store dataSnapshot for use in below examples.
+          fredSnapshot = dataSnapshot.child(name).numChildren();
+
+
+          var ref1 = new Firebase('https://scorching-torch-6903.firebaseio.com/lotten/' + name);
+          var usersRef = ref1.child("random");
+          usersRef.set({
+
+          number: Math.floor((Math.random() * fredSnapshot) + 1)
+
+      });
+
+
+          
+      });
+    }
     
     // Prompt the user for a name to use.
     //name = prompt("Your name?", "Guest");
-    document.getElementById( 'barHomeIconFake' ).style.display = 'block';
-    document.getElementById( 'barHomeIcon' ).style.display = 'none';
+    //document.getElementById( 'barHomeIconFake' ).style.display = 'block';
+    //document.getElementById( 'barHomeIcon' ).style.display = 'none';
 
-    lobby = sessionStorage.getItem('lobby');
-    console.log(lobby);
-
-    //var name = lobby;
+    
 
     
     //var name = prompt("Your name?", "Guest");
@@ -58,29 +79,7 @@ function geefNieuwLotNummer() {
       });
     */
     
-    var fredRef = new Firebase('https://scorching-torch-6903.firebaseio.com/');
-     
-
-
-
-      fredRef.once('value', function(dataSnapshot) {
-          
-          // store dataSnapshot for use in below examples.
-          fredSnapshot = dataSnapshot.child(name).numChildren();
-
-
-          var ref1 = new Firebase('https://scorching-torch-6903.firebaseio.com/lotten/' + name);
-          var usersRef = ref1.child("random");
-          usersRef.set({
-
-          number: Math.floor((Math.random() * fredSnapshot) + 1)
-
-      });
-
-
-          
-      });
-    }
+    
 
 
 

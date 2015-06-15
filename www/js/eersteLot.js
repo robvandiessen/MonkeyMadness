@@ -1,6 +1,7 @@
-
 function geefLotNummer() {
-
+    $('#StartContainer').removeClass('VeiligLot');
+    $('#StartContainer').addClass('NeutraalLot');
+    $('#btnOpnieuw').remove();
     // Prompt the user for a name to use.
 		//name = prompt("Your name?", "Guest");
     document.getElementById( 'barHomeIconFake' ).style.display = 'block';
@@ -75,19 +76,22 @@ function geefLotNummer() {
 
       // Get a database reference to our posts
       ref = new Firebase('https://scorching-torch-6903.firebaseio.com/lotten/' + name + '/random/number');
-          
+         
+      
+
       // Attach an asynchronous callback to read the data at our posts reference   
       ref.on("value", function(snapshot) {
 
           ter = snapshot.val();
-          
+          sessionStorage.setItem("randomNumber", ref);
+
+          randomNummer = sessionStorage.getItem('randomNumber');
 
             $("#strookje").click( function() {
               console.log(nummerGebruiker);
               console.log(ter);
 
               if(nummerGebruiker == ter){
-
                   $( "#btnCheck" ).remove(); 
                   $( "#btnOpnieuw" ).remove();
                   
@@ -97,16 +101,17 @@ function geefLotNummer() {
                   
               }
               
-              else{
-                  
+              else{                  
                   $( "#btnCheck" ).remove();
                   $( "#btnOpnieuw" ).remove();
                   $('#StartContainer').removeClass('NeutraalLot');
                   $('#StartContainer').addClass('VeiligLot');
-                  //$( '<button onclick="geefNieuwLotNummer()" class="hideItem waves-effect grey-text text-darken-4 light-green lighten-4 btn" id="btnOpnieuw"> Opnieuw </button>' ).appendTo( "#myDiv" );
+                  $( '<button onclick="geefLotNummer()" class="hideItem waves-effect grey-text text-darken-4 light-green lighten-4 btn" id="btnOpnieuw"> Opnieuw </button>' ).appendTo( "#myDiv" );
                   
                   
               }
+
+              myUserRef.remove();
               
 
 
@@ -134,7 +139,9 @@ function geefLotNummer() {
 
           
       });
+
     });
+  
 }
 
 
