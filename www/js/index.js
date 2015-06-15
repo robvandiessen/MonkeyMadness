@@ -141,7 +141,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/wheel",
     views: {
       'menuContent': {
-        templateUrl: "HOME/wheel.html", //templates
+        templateUrl: "home/wheel.html", //templates
         controller: 'WheelCtrl'
       }
     }
