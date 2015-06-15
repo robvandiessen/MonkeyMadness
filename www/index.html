@@ -21,7 +21,7 @@
     <script src='https://cdn.rawgit.com/Dogfalo/materialize/master/dist/js/materialize.js'></script>
     <script type="text/javascript" src="js/wheel.js"></script>
     <script type="text/javascript" src="js/opdrachten.js"></script>
-    <script type="text/javascript" src="js/materialize-functions.js"></script>
+    <script type="text/javascript" src="js/mainFunctions.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/maaklobby.js"></script>
     <script type="text/javascript" src="js/joinlobby.js"></script>
@@ -40,13 +40,13 @@
           <ion-nav-bar class="bar-positive" id="bar-main"> 
 
             <ion-nav-buttons side="right"> 
-              <a href="#/home" class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIcon"></a>
+              <a href="#/app/tabs/home" class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIcon"></a>
               <a class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIconFake" onclick="Materialize.toast('Helaas! Gij zult deelnemen!', 4000)"></a>
 
             </ion-nav-buttons>
 
             <ion-nav-buttons side="left">
-              <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+              <button class="button button-icon button-clear ion-navicon" menu-toggle="left" id="sideMenuIcon"></button>
             </ion-nav-buttons>
 
           </ion-nav-bar>      
@@ -99,15 +99,15 @@
       </ion-tabs>
     </script>
 
-    <!-- <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.start" onclick="geefLotNummer(); ">Nieuw spel</a> -->
+    <!---->
     <script id="templates/tabs-home.html" type="text/ng-template">
       <ion-view view-title="home" >
         <ion-content>
           <img src="img/HOME-bg.jpg" class="responsive-image">
           <div class="center-align">
             
-            <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.lobbyadmin">Nieuw spel</a>
-            <a id="btnNieuwSpel" class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.deelnemen">Spel deelnemen</a>
+            <button id="btn" ui-sref="app.lobbyadmin">Nieuw spel</button>
+            <button id="btn" ui-sref="app.deelnemen">Spel deelnemen</button>
           </div>
 
         </ion-content>

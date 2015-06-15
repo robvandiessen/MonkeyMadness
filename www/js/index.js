@@ -7,7 +7,7 @@ angular.module('ionicApp', ['ionic'])
 
   $stateProvider
 
-  /* SIDEMENU NAVIGATIE */
+  
   .state('app', {
     url: "/app",
     abstract: true,
@@ -15,11 +15,33 @@ angular.module('ionicApp', ['ionic'])
     controller: 'AppCtrl'
   })
 
+  /* WELKOM + UITLEG SCHERMEN */
+  .state('app.welkom', {
+    url: "/welkom",
+    views: {
+        'menuContent': {
+          templateUrl: "START/welkom.html", //templates
+          controller: 'StartCtrl'
+        }
+      }
+    })
+
+  .state('app.uitleg1', {
+    url: "/uitleg1",
+    views: {
+        'menuContent': {
+          templateUrl: "START/uitleg1.html", //templates
+          controller: 'StartCtrl'
+        }
+      }
+    })
+
+  /* SIDEMENU NAVIGATIE */
   .state('app.mexen', {
     url: "/mexen",
     views: {
       'menuContent': {
-        templateUrl: "sidemenu/mexen.html",
+        templateUrl: "SIDEMENU/mexen.html",
         controller: 'MexenCtrl'
       }
     }
@@ -29,7 +51,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/spelregels",
     views: {
       'menuContent': {
-        templateUrl: "sidemenu/spelregels.html",
+        templateUrl: "SIDEMENU/spelregels.html",
         controller: 'SpelregelsCtrl'
       }
     }
@@ -39,7 +61,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/contact",
     views: {
       'menuContent': {
-        templateUrl: "sidemenu/contact.html",
+        templateUrl: "SIDEMENU/contact.html",
         controller: 'ContactCtrl'
       }
     }
@@ -60,7 +82,8 @@ angular.module('ionicApp', ['ionic'])
     url: "/home",
     views: {
       'home': {
-        templateUrl: "templates/tabs-home.html"
+        templateUrl: "templates/tabs-home.html",
+        controller: 'HomeCtrl'
       }
     }
   })
@@ -88,8 +111,8 @@ angular.module('ionicApp', ['ionic'])
     url: "/start",
     views: {
       'menuContent': {
-        templateUrl: "home/start.html", //templates
-        controller: 'HomeCtrl'
+        templateUrl: "HOME/start.html", //templates
+        controller: 'RadCtrl'
       }
     }
   })
@@ -98,7 +121,7 @@ angular.module('ionicApp', ['ionic'])
           url: "/lobbyadmin",
           views: {
               'menuContent': {
-                  templateUrl: "home/lobbyadmin.html", //templates
+                  templateUrl: "HOME/lobbyadmin.html", //templates
                   controller: 'LobbyMakenCtrl'
               }
           }
@@ -108,7 +131,7 @@ angular.module('ionicApp', ['ionic'])
           url: "/deelnemen",
           views: {
               'menuContent': {
-                  templateUrl: "home/deelnemen.html", //templates
+                  templateUrl: "HOME/deelnemen.html", //templates
                   controller: 'LobbyDeelnameCtrl'
               }
           }
@@ -118,7 +141,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/wheel",
     views: {
       'menuContent': {
-        templateUrl: "home/wheel.html", //templates
+        templateUrl: "HOME/wheel.html", //templates
         controller: 'WheelCtrl'
       }
     }
@@ -129,7 +152,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie1",
     views: {
       'menuContent': {
-        templateUrl: "home/categorieen/categorie1.html", //templates
+        templateUrl: "HOME/CATEGORIEEN/categorie1.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -139,7 +162,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie2",
     views: {
       'menuContent': {
-        templateUrl: "home/categorieen/categorie2.html", //templates
+        templateUrl: "HOME/CATEGORIEEN/categorie2.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -149,7 +172,7 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie3",
     views: {
       'menuContent': {
-        templateUrl: "home/categorieen/categorie3.html", //templates
+        templateUrl: "HOME/CATEGORIEEN/categorie3.html", //templates
         controller: 'CategorieCtrl'
       }
     }
@@ -159,18 +182,21 @@ angular.module('ionicApp', ['ionic'])
     url: "/categorie4",
     views: {
       'menuContent': {
-        templateUrl: "home/categorieen/categorie4.html", //templates
+        templateUrl: "HOME/CATEGORIEEN/categorie4.html", //templates
         controller: 'CategorieCtrl'
       }
     }
   })
 
-  $urlRouterProvider.otherwise("/app/tabs/home");
+  $urlRouterProvider.otherwise("/app/welkom");
   //$ionicConfigProvider.views.maxCache(0);
 })
 
 .controller('AppCtrl', function($scope) {
   console.log('AppCtrl');
+
+  
+
 })
 
 .controller('MexenCtrl', function($scope) {
@@ -185,6 +211,11 @@ angular.module('ionicApp', ['ionic'])
 
 .controller('ContactCtrl', function($scope) {
   console.log('ContactCtrl');
+  
+})
+
+.controller('RadCtrl', function($scope) {
+  console.log('RadCtrl');
   
 })
 
@@ -222,13 +253,23 @@ angular.module('ionicApp', ['ionic'])
   
 })
 
-
+.controller('StartCtrl', function($scope) {
+  console.log('StartCtrl');
+  hideHeadBar();
+  
+})
 
 .controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
-  //maakLobby();
-  //testTest();
+  
+  showHeadBar();
+  
   
 });
+
+
+
+
+
 
 
 

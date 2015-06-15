@@ -1,6 +1,8 @@
 function geefLotNummer() {
     $('#StartContainer').removeClass('VeiligLot');
     $('#StartContainer').addClass('NeutraalLot');
+    $('#strookje').hide();
+    $('#strookje').show();
     $('#btnOpnieuw').remove();
     // Prompt the user for a name to use.
 		//name = prompt("Your name?", "Guest");
@@ -104,6 +106,7 @@ function geefLotNummer() {
               else{                  
                   $( "#btnCheck" ).remove();
                   $( "#btnOpnieuw" ).remove();
+                  $('#strookje').hide();
                   $('#StartContainer').removeClass('NeutraalLot');
                   $('#StartContainer').addClass('VeiligLot');
                   $( '<button onclick="geefLotNummer()" class="hideItem waves-effect grey-text text-darken-4 light-green lighten-4 btn" id="btnOpnieuw"> Opnieuw </button>' ).appendTo( "#myDiv" );
