@@ -188,7 +188,7 @@ angular.module('ionicApp', ['ionic'])
     }
   })
 
-  $urlRouterProvider.otherwise("/app/welkom");
+  $urlRouterProvider.otherwise("/app/tabs/home");
   //$ionicConfigProvider.views.maxCache(0);
 })
 
