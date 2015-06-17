@@ -77,7 +77,7 @@ function geefLotNummer() {
    sessionStorage.setItem("nummer", user.status);
 
    nummerGebruiker = sessionStorage.getItem('nummer');
-
+   $("#spelersNummer").html(' Klik op de banaan en kijk of je voor aap moet staan! </br> Jij bent speler: ' + nummerGebruiker );
       // Get a database reference to our posts
       ref = new Firebase('https://scorching-torch-6903.firebaseio.com/lotten/' + name + '/random/number');
          
@@ -149,7 +149,7 @@ function geefLotNummer() {
 
 function nietGeslaagd()
 {
-  
+  $("#opnieuwUitleg").html('Speler ' + ter + ' moet een opdracht uitvoeren. Vind jij de opdracht geslaagd?');
   $("#myDiv").html('<p id="startAfwachten"> Wacht geduldig af tot speler ' + ter + ' nog een keer aan het rad van schaamte heeft gedraaid </p>');
 }
 
