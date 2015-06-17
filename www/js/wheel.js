@@ -40,6 +40,8 @@ function ordSequential() {
 };
 
 function spin(){
+        $('#spinButtonWheel').hide();
+        $( '<a class="btn" id="spinButtonWheelFake">Spin!</a>' ).appendTo( "#wheelSection" );
         console.log(_deg);
         $( "#btnToonOpdracht" ).remove();
         // select algorithm sequential, random or preset :
@@ -64,56 +66,56 @@ function spin(){
                         console.log(_target);
                         if (_target == 0) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Gorilla');
+                            $("#wheelTitle").html('Gorilla opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie1" onclick="toonCategorie1()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 1) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Maki');
+                            $("#wheelTitle").html('Maki opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie2" onclick="toonCategorie2()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 2) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Chimpanzee');
+                            $("#wheelTitle").html('Chimpanzee opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie3" onclick="toonCategorie3()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 3) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Baviaan');
+                            $("#wheelTitle").html('Baviaan opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie4" onclick="toonCategorie4()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 4) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Gorilla');
+                            $("#wheelTitle").html('Gorilla opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie1" onclick="toonCategorie1()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 5) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Maki');
+                            $("#wheelTitle").html('Maki opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie2" onclick="toonCategorie2()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 6) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Chimpanzee');
+                            $("#wheelTitle").html('Chimpanzee opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie3" onclick="toonCategorie3()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
 
                         if (_target == 7) {
                             $( "#btnToonOpdracht" ).remove();
-                            $("#WheelTitle").html('Baviaan');
+                            $("#wheelTitle").html('Baviaan opdracht');
                             $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnToonOpdracht" href="#/app/categorie4" onclick="toonCategorie4()">Toon opdracht</a>' ).appendTo( "#uitlegOpdracht" );
                             
                         };
@@ -137,7 +139,7 @@ function spin(){
             } // first animation completed
 
         }); // velocity
-        removeSpinButton();
+        
         return false;
         
 }
@@ -256,15 +258,8 @@ var spin = (function () {
 
 function spinButton(){
 
-    $( '<a class="btn" onclick="spin()" id="spinButtonWheel">Spin</a>' ).appendTo( "#wheelSection" );
-
+    $( '<a class="btn" onclick="spin()" id="spinButtonWheel">Spin!</a>' ).appendTo( "#wheelSection" );
 
 }
-
-function removeSpinButton()
-{
-    $('#spinButtonWheel').addClass('notActive');
-}
-
 
 

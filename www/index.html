@@ -40,8 +40,9 @@
           <ion-nav-bar class="bar-positive" id="bar-main"> 
 
             <ion-nav-buttons side="right"> 
-              <a href="#/app/tabs/home" class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIcon"></a>
-              <a class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIconFake" onclick="Materialize.toast('Helaas! Gij zult deelnemen!', 4000)"></a>
+              <a href="#/app/tabs/home" class="button button-icon nav-clear ion-ios7-home-outline" id="barHomeIcon" onclick="stopSound();"></a>
+              <a href="#/app/tabs/home" class="button button-icon nav-clear ion-ios7-close-outline" id="barLeaveIcon" onclick="verwijderGebruikers(); stopGeluid();"></a>
+              
 
             </ion-nav-buttons>
 
@@ -55,22 +56,18 @@
 
         <ion-side-menu side="left">
 
-          <ion-header-bar class="bar-stable">
-            <h1 class="title">Monkey Madness</h1>
-          </ion-header-bar>
-
           <ion-content>
-
+            <img src="img/SIDEMENU-bg.jpg" class="responsive-image">
             <ion-list>
-              <ion-item nav-clear menu-close ui-sref="app.mexen">
-                Mexen
+              <div class="sideMenuItem" id="lobbyNumber">  </div>
+              
+              <ion-item nav-clear menu-close ui-sref="app.spelregels" onclick="stopSound();">
+                <div class="sideMenuItem"> Spelregels </div>
               </ion-item>
-              <ion-item nav-clear menu-close ui-sref="app.spelregels">
-                Spelregels
+              <ion-item nav-clear menu-close ui-sref="app.contact"  onclick="stopSound();">
+                <div class="sideMenuItem"> Contact </div>
               </ion-item>
-              <ion-item nav-clear menu-close ui-sref="app.contact">
-                Contact
-              </ion-item>
+              
             </ion-list>
 
           </ion-content>
@@ -106,8 +103,10 @@
           <img src="img/HOME-bg.jpg" class="responsive-image">
           <div class="center-align">
 
-            <button id="btn" ui-sref="app.lobbyadmin">Nieuw spel</button>
-            <button id="btn" ui-sref="app.deelnemen">Spel deelnemen</button>
+
+            <button id="btn" ui-sref="app.deelnemen">Deelnemen</button>
+            <button id="btnDeelname" ui-sref="app.lobbyadmin">  + </button>
+            
           </div>
 
         </ion-content>
@@ -117,8 +116,16 @@
     <!-- TAB RANKING -->
     <script id="templates/tabs-ranking.html" type="text/ng-template">
       <ion-view view-title="ranking">
-        <ion-content>
-          <h1>ranking Tab</h1>
+        <ion-content class="notActivePage">
+
+          <img src="img/BOUWEN-bg.jpg" class="responsive-image">
+              <div class="center-align">
+
+                <h2> Niets te zien hier </h2>
+                <h3> Hier wordt aan gewerkt!</h3>
+                
+              </div>
+          
         </ion-content>
       </ion-view>
     </script>
@@ -126,8 +133,16 @@
     <!-- TAB CHAT -->
     <script id="templates/tabs-chat.html" type="text/ng-template">
       <ion-view view-title="chat">
-        <ion-content>
-          <h1>chat Tab</h1>
+        <ion-content class="notActivePage">
+
+          <img src="img/BOUWEN-bg.jpg" class="responsive-image">
+              <div class="center-align">
+
+                <h2> Niets te zien hier </h2>
+                <h3> Hier wordt aan gewerkt!</h3>
+                
+              </div>
+          
         </ion-content>
       </ion-view>
     </script>

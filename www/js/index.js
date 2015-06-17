@@ -37,16 +37,6 @@ angular.module('ionicApp', ['ionic'])
     })
 
   /* SIDEMENU NAVIGATIE */
-  .state('app.mexen', {
-    url: "/mexen",
-    views: {
-      'menuContent': {
-        templateUrl: "sidemenu/mexen.html",
-        controller: 'MexenCtrl'
-      }
-    }
-  })
-
   .state('app.spelregels', {
     url: "/spelregels",
     views: {
@@ -214,9 +204,10 @@ angular.module('ionicApp', ['ionic'])
   
 })
 
-.controller('RadCtrl', function($scope) {
+.controller('RadCtrl', function($scope, $ionicPopup) {
   console.log('RadCtrl');
-  
+  StartElements();
+  toonLobby();
 })
 
 .controller('WheelCtrl', function($scope, $ionicPopup, $timeout) {
@@ -224,8 +215,8 @@ angular.module('ionicApp', ['ionic'])
   spinButton();
   speelGeluid();
   $ionicPopup.alert({
-    title: 'Zet nu je geluid aan!',
-    template: 'voor de ultieme beleving'
+    title: 'Zet nu je geluid aan...',
+    template: 'Voor de ultieme beleving van het rad van schaamte!'
   });
 
   
@@ -259,7 +250,7 @@ angular.module('ionicApp', ['ionic'])
   
 })
 
-.controller('HomeCtrl', function($scope, $ionicPopup, $timeout) {
+.controller('HomeCtrl', function($scope) {
   
   showHeadBar();
   

@@ -1,20 +1,22 @@
 function geefLotNummer() {
-    $('#StartContainer').removeClass('VeiligLot');
+    $("#barLeaveIcon").addClass('disableClick')
+    document.getElementById( 'barLeaveIcon' ).style.opacity = '0.2';
+    document.getElementById( 'lobbyNumber' ).style.display = 'block';
     $('#StartContainer').addClass('NeutraalLot');
-    $('#strookje').hide();
+    $('#strookje, #startAfwachten').hide();
     $('#strookje').show();
+    $('#spelersNummer').html('Klik op de banaan en kijk of je voor aap moet staan!')
     $('#btnOpnieuw').remove();
+    $('#START_Aap_opnieuw, #opnieuwUitleg, #strookjeGeslaagd, #strookjeNietGeslaagd, #opnieuwUitleg').hide();
     // Prompt the user for a name to use.
 		//name = prompt("Your name?", "Guest");
-    document.getElementById( 'barHomeIconFake' ).style.display = 'block';
-    document.getElementById( 'barHomeIcon' ).style.display = 'none';
+    
 
     lobby = sessionStorage.getItem('lobby');
     console.log(lobby);
 
     name = lobby;
 
-	
     //var name = prompt("Your name?", "Guest");
     var currentStatus = "? online";
 
@@ -90,33 +92,31 @@ function geefLotNummer() {
           randomNummer = sessionStorage.getItem('randomNumber');
 
             $("#strookje").click( function() {
-              console.log(nummerGebruiker);
-              console.log(ter);
+              $("#barLeaveIcon").removeClass('disableClick')
+              document.getElementById( 'barLeaveIcon' ).style.opacity = '1';
 
               if(nummerGebruiker == ter){
+                  $("#spelersNummer").html('Jij bent speler: ' + nummerGebruiker );
                   $( "#btnCheck" ).remove(); 
                   $( "#btnOpnieuw" ).remove();
-                  
                   $('#StartContainer').removeClass('NeutraalLot');
                   $('#StartContainer').addClass('HelaasLot');
                   $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnCheck" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel"> Ga door </a>' ).appendTo( "#myDiv" );
                   
               }
               
-              else{                  
-                  $( "#btnCheck" ).remove();
-                  $( "#btnOpnieuw" ).remove();
+              else{   
+
+                  $("#spelersNummer").html('Jij bent speler: ' + nummerGebruiker );
+                  $( "#btnCheck, #btnOpnieuw" ).remove();
                   $('#strookje').hide();
                   $('#StartContainer').removeClass('NeutraalLot');
-                  $('#StartContainer').addClass('VeiligLot');
-                  $( '<button onclick="geefLotNummer()" class="hideItem waves-effect grey-text text-darken-4 light-green lighten-4 btn" id="btnOpnieuw"> Opnieuw </button>' ).appendTo( "#myDiv" );
-                  
-                  
+                  $('#START_Aap_opnieuw, #opnieuwUitleg, #strookjeGeslaagd, #strookjeNietGeslaagd, #opnieuwUitleg').show();
+                  $("#opnieuwUitleg").html('Speler ' + ter + ' moet een opdracht uitvoeren. Vind jij de opdracht geslaagd?');
+
               }
 
               myUserRef.remove();
-              
-
 
             });
 
@@ -124,7 +124,7 @@ function geefLotNummer() {
 
 
       });
-
+  
       fredRef.once('value', function(dataSnapshot) {
           
           // store dataSnapshot for use in below examples.
@@ -146,5 +146,12 @@ function geefLotNummer() {
     });
   
 }
+
+function nietGeslaagd()
+{
+  
+  $("#myDiv").html('<p id="startAfwachten"> Wacht geduldig af tot speler ' + ter + ' nog een keer aan het rad van schaamte heeft gedraaid </p>');
+}
+
 
 

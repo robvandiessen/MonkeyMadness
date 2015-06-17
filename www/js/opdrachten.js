@@ -35,6 +35,7 @@ var beschrijvingCat1 = categorie1Beschrijving[random1];
 function toonCategorie1(){
 	$("#titelCat1").html(titelCat1);
 	$("#beschrijvingCat1").html(beschrijvingCat1);
+	
 }
 
 /* CATEGORIE 2 */
@@ -74,6 +75,7 @@ var beschrijvingCat2 = categorie2Beschrijving[random2];
 function toonCategorie2(){
 	$("#titelCat2").html(titelCat2);
 	$("#beschrijvingCat2").html(beschrijvingCat2);
+	
 }
 
 /* CATEGORIE 3 */
@@ -113,6 +115,7 @@ var beschrijvingCat3 = categorie3Beschrijving[random3];
 function toonCategorie3(){
 	$("#titelCat3").html(titelCat3);
 	$("#beschrijvingCat3").html(beschrijvingCat3);
+	
 }
 
 /* CATEGORIE 4 */
@@ -152,6 +155,7 @@ var beschrijvingCat4 = categorie4Beschrijving[random4];
 function toonCategorie4(){
 	$("#titelCat4").html(titelCat4);
 	$("#beschrijvingCat4").html(beschrijvingCat4);
+	
 }
 
 

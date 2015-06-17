@@ -1,16 +1,19 @@
 <ion-view view-title="Start">
 	<ion-content id="StartContainer" class="NeutraalLot">
-		  <div class="center-align" id="startContent">
-		  	
-		  	<button id="strookje" class="waves-effect grey-text text-darken-4 light-green lighten-4 btn" >
-		  		<img src="img/START-banana.png" alt="Smiley face" height="100%" width="100%" id="banaan">
-		  		
-		  	</button>
-		
-  	
+		<div class="center-align" id="startContent">
+		  	<img src="img/START-img-veilig.jpg" class="responsive-image" id="START_Aap_opnieuw">
+		  	<h3 id="spelersNummer"> Klik op de banaan en kijk of je voor aap moet staan!</h3>
+
+		  	<div id="strookje">
+		  		<img src="img/START-banana.png" height="100%" width="100%">
+		  	</div>
+			
+			<h2 id="opnieuwUitleg"> </h2>
+		  	<button id="strookjeGeslaagd" onclick="geefLotNummer();">Ja</button>
+		  	<button id="strookjeNietGeslaagd" onclick="nietGeslaagd();">Nee</button>
 		  	<div id="myDiv"></div> </br>
 
 		  	
-		  </div>
+		</div>
     </ion-content>
 </ion-view>

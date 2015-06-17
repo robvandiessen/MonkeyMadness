@@ -1,19 +1,14 @@
 <ion-view view-title="Deelnemen">
-    <ion-content >
+    <ion-content class="lobby">
 
+    	<div class="center-align">
+        	<img src="img/LOBBY-image-apen.png" id="lobbyImage" class="responsive-image">
+        	<h3> Voer het nummer van de <b> baas </b> in!</h3>
+            <h2 id="Number"></h2>
+            <br>
 
-
-        <div class="center-align">
-
-            <label class="item item-input">
-                <span class="input-label">Number</span>
-                <input type="text" name="server" id="saveNumber" maxlength="4" size="4">
-            </label>
-
-
-            <a  class="waves-effect grey-text text-darken-4 yellow btn" ui-sref="app.start" onclick="joinLobby(); geefLotNummer();">Deelnemen</a>
-
-
+            <input type="text" name="server" id="saveNumber" maxlength="4" placeholder="bv. 1212">
+            <a id="btn"class="btn" ui-sref="app.start" onclick="joinLobby(); geefLotNummer();">Start spel</a>
         </div>
 
     </ion-content>

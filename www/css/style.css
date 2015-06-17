@@ -32,8 +32,52 @@ body {
 
 .bar.bar-stable .title
 {
-  text-align: left;
+  font-family: 'Roboto';
+  font-size: 17px;
+  text-align: center;
   text-transform: uppercase;
+}
+
+.sideMenuItem
+{
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  padding: 2px;
+  text-align: left;
+}
+
+
+
+/* POP UPS */
+.popup
+{
+  width: 50%;
+}
+
+.popup-head
+{
+  text-transform: uppercase;
+  background-color: #ffeb3b;
+  color: #ffffff;
+  border-bottom: #ffffff dotted 5px;
+}
+
+.popup-body
+{
+  font-size: 17px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 30px;
+}
+
+.popup-container.popup-showing
+{
+  background-color: rgba(0,0,0,0.5);
 }
 
 #btn 
@@ -57,7 +101,39 @@ body {
   -webkit-box-shadow: inset 0 -2px #e2b607;
   box-shadow: inset 0 -2px #e2b607;
 }
+
 #btn:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#btnDeelname
+{
+  position: relative;
+  /* vertical-align: top; */
+  width: 20%;
+  height: 50px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 5%;
+  padding: 0%;
+  font-size: 22px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #86bb48;
+  border: 0;
+  border-radius: 5px;
+  border-bottom: 2px solid #75a43e;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #75a43e;
+  box-shadow: inset 0 -2px #75a43e;
+}
+
+#btnDeelname:active {
   top: 1px;
   outline: none;
   -webkit-box-shadow: none;
@@ -84,7 +160,7 @@ body {
   background-color: red;
 }
 
-#barHomeIconFake
+#barLeaveIcon
 {
   display: none;
 }
@@ -92,6 +168,16 @@ body {
 .showItem
 {
   display: block;
+}
+
+.disableClick
+{
+    pointer-events: none;
+}
+
+.disableIcon
+{
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* TAB NAVIGATION */
@@ -132,7 +218,7 @@ body {
   color: #ffffff;
   font-family: 'Roboto';
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   padding-bottom: 4%;
 }
@@ -152,6 +238,11 @@ body {
 #meerdereSpelersImg
 {
   width: 50%;
+}
+
+#welkomImg
+{
+  width: 30%;
 }
 
 /* HOME */
@@ -185,13 +276,109 @@ body {
 }
 
 /* START SPEL */
+#spelersNummer
+{
+  font-family: 'Roboto';
+  font-size: 23px;
+  font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 10px;
+  /* background-color: blueviolet; */
+  border-bottom: solid 2px black;
+  /* line-height: 30px; */
+  border-top: solid 2px black;
+}
+
 #strookje
 {
-  width: 250px;
-  height: 250px;
-  border-radius: 150px;
-  position: static;
-  margin-top: 100px;
+  width: 50%;
+  height: auto;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+}
+
+#opnieuwUitleg
+{
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#strookjeGeslaagd
+{
+  position: relative;
+  vertical-align: top;
+  width: 40%;
+  height: 50px;
+  padding-top: 1%;
+  margin: 15px;
+  font-size: 22px;
+  color: #000000;
+  font-family: 'Roboto';
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #86bb48;
+  border: 0;
+  border-radius: 5px;
+  border-bottom: 2px solid #75a43e;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #75a43e;
+  box-shadow: inset 0 -2px #75a43e;
+}
+
+#strookjeGeslaagd:active
+{
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#strookjeNietGeslaagd
+{
+  position: relative;
+  vertical-align: top;
+  width: 40%;
+  height: 50px;
+  padding-top: 1%;
+  margin: 15px;
+  font-size: 22px;
+  color: #000000;
+  font-family: 'Roboto';
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #ff4949;
+  border: 0;
+  border-radius: 5px;
+  border-bottom: 2px solid #ea2b2b;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #ea2b2b;
+  box-shadow: inset 0 -2px #ea2b2b;
+}
+
+#strookjeNietGeslaagd:active
+{
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#startAfwachten
+{
+  margin: 0 0 10px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 25px;
+  padding: 2% 5% 0% 5%;
 }
 
 .loserLot
@@ -211,7 +398,7 @@ body {
   width: 90%;
   height: 50px;
   padding-top: 1%;
-  margin-top: 30px;
+  margin-top: 140px;
   font-size: 22px;
   color: #000000;
   font-family: 'Roboto';
@@ -278,14 +465,21 @@ body {
   margin-top: -390px;
 }
 
-#WheelTitle
+#wheelTitle
 {
-  font-size: 35px;
   font-family: 'Roboto';
-  font-weight: 900;
-  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  width: 80%;
+  margin: 0 auto;
   text-transform: uppercase;
-  margin-top: 10px;
+  padding: 2%;
+  border-bottom: solid 2px black;
+  /* line-height: 30px; */
+  border-top: solid 2px black;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 #btnSpinWheel
@@ -341,7 +535,86 @@ body {
   cursor: default;
 }
 
-/* OPDRACHTSCHERM */
+/* LOBBY */
+#lobbyImage
+{
+  width: 70%;
+  margin: 3%;
+}
+
+.lobby h2 
+{
+  font-family: 'Roboto';
+  font-size: 70px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.lobby h3 
+{
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 100;
+  font-style: italic;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#saveNumber
+{
+  background-color: white;
+  width: 60%;
+  margin: 0 auto;
+  padding: 5%;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #000000;
+  font-family: 'Roboto';
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* VERWIJZING NUMMER IN SIDEMENU */
+#lobbyNumber
+{
+  background-color: #8bc34a;
+  height: 65px;
+  padding: 20px;
+  font-weight: 500;
+  color:#ffffff;
+  display:none;
+}
+
+/* NOT ACTIVE PAGES */
+.notActivePage h2
+{
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.notActivePage h3
+{
+  font-family: 'Roboto';
+  font-size: 26px;
+  font-weight: 100;
+  font-style: italic;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
 
 
 
