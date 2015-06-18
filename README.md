@@ -5,13 +5,13 @@ Hoe goed vertrouw jij je vrienden? Ben jij een echte gorilla die alles aan durft
 
 
 ## Doel
-Het hooft doel van Monkey Madness is amusement met je vrienden / vrienden te creëren en ze opdrachten te laten doen om buiten hun comfort zone treden.
+Het belangrijkste doel van Monkey Madness is het creëren van amusement met je vrienden. Met deze app laat je jouw vrienden opdrachten uitvoeren om ze buiten hun comfortzone te laten treden.
+
 Wat de app in het kort doet is:
-- Random slachtoffer kiezen binnen een vriendengroep.
+- Spel lobbys aanmaken, zodat je echt alleen met jouw vrienden samen zit
+- Random een slachtoffer kiezen binnen een lobby
 - Geeft een opdracht met beschrijving door aan slachtoffer.
 - Anderen spelers bepalen of de opdracht geslaagd is.
-- Maakt spel lobbys aan.
-
 
 ## UI
 De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps worden gemaakt voor iOS en Android met behulp van: HTML, CSS en Javascript. Ionic richt zich vooral op de look en feel en UI interactie van de app. Het Framework vervangt ook PhoneGap niet of een ander Javascript Framework. Zelf ontwikkelde HTML, CSS en Javascript is ook zonder problemen in Ionic te verwerken.
