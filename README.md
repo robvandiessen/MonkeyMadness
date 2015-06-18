@@ -17,7 +17,7 @@ De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps
 ## Plugins
 **org.apache.cordova.device-motion** This plugin allows the app to read the accelerometer sensor. It is used to allow the user to navigate a list of cartoons by tilting the device. This could (but completely doens't) create a more natural way of navigating such lists.
 
-**https://cdn.firebase.com/js/client/2.2.1/firebase.js**Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
+**https://cdn.firebase.com/js/client/2.2.1/firebase.js** Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
 
 
 ## Externe diensten 
