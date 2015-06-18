@@ -5,7 +5,6 @@ function geefLotNummer() {
     $('#StartContainer').addClass('NeutraalLot');
     $('#strookje, #startAfwachten').hide();
     $('#strookje').show();
-    $('#spelersNummer').html('Klik op de banaan en kijk of je voor aap moet staan!')
     $('#btnOpnieuw').remove();
     $('#START_Aap_opnieuw, #opnieuwUitleg, #strookjeGeslaagd, #strookjeNietGeslaagd, #opnieuwUitleg').hide();
     // Prompt the user for a name to use.
@@ -77,7 +76,6 @@ function geefLotNummer() {
    sessionStorage.setItem("nummer", user.status);
 
    nummerGebruiker = sessionStorage.getItem('nummer');
-   $("#spelersNummer").html(' Klik op de banaan en kijk of je voor aap moet staan! </br> Jij bent speler: ' + nummerGebruiker );
       // Get a database reference to our posts
       ref = new Firebase('https://scorching-torch-6903.firebaseio.com/lotten/' + name + '/random/number');
          
@@ -92,11 +90,12 @@ function geefLotNummer() {
           randomNummer = sessionStorage.getItem('randomNumber');
 
             $("#strookje").click( function() {
+
               $("#barLeaveIcon").removeClass('disableClick')
               document.getElementById( 'barLeaveIcon' ).style.opacity = '1';
 
               if(nummerGebruiker == ter){
-                  $("#spelersNummer").html('Jij bent speler: ' + nummerGebruiker );
+                  $("#spelersNummer").html('Jij staat voor aap!' );
                   $( "#btnCheck" ).remove(); 
                   $( "#btnOpnieuw" ).remove();
                   $('#StartContainer').removeClass('NeutraalLot');
@@ -104,15 +103,15 @@ function geefLotNummer() {
                   $( '<a class="waves-effect grey-text text-darken-4 yellow btn" id="btnCheck" ui-sref="app.wheel" icon-off="ion-ios7-filing-outline" href="#/app/wheel"> Ga door </a>' ).appendTo( "#myDiv" );
                   
               }
-              
+
               else{   
 
-                  $("#spelersNummer").html('Jij bent speler: ' + nummerGebruiker );
+                  $("#spelersNummer").html('Je hebt geluk!' );
                   $( "#btnCheck, #btnOpnieuw" ).remove();
                   $('#strookje').hide();
                   $('#StartContainer').removeClass('NeutraalLot');
                   $('#START_Aap_opnieuw, #opnieuwUitleg, #strookjeGeslaagd, #strookjeNietGeslaagd, #opnieuwUitleg').show();
-                  $("#opnieuwUitleg").html('Speler ' + ter + ' moet een opdracht uitvoeren. Vind jij de opdracht geslaagd?');
+                  $("#opnieuwUitleg").html('Een van je medespelers moet een opdracht uitvoeren... Vind jij de opdracht geslaagd? ');
 
               }
 
@@ -149,9 +148,8 @@ function geefLotNummer() {
 
 function nietGeslaagd()
 {
-  $("#opnieuwUitleg").html('Speler ' + ter + ' moet een opdracht uitvoeren. Vind jij de opdracht geslaagd?');
-  $("#myDiv").html('<p id="startAfwachten"> Wacht geduldig af tot speler ' + ter + ' nog een keer aan het rad van schaamte heeft gedraaid </p>');
+  $("#opnieuwUitleg").html('Wacht geduldig af tot een van je medespelers nog een keer aan het rad van schaamte heeft gedraaid');
+  
 }
-
 
 
