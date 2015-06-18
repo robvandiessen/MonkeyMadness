@@ -1,6 +1,7 @@
 function geefLotNummer() {
     $("#barLeaveIcon").addClass('disableClick')
     document.getElementById( 'barLeaveIcon' ).style.opacity = '0.2';
+    $('ion-item').hide();
     document.getElementById( 'lobbyNumber' ).style.display = 'block';
     $('#StartContainer').addClass('NeutraalLot');
     $('#strookje, #startAfwachten').hide();
@@ -92,6 +93,7 @@ function geefLotNummer() {
             $("#strookje").click( function() {
 
               $("#barLeaveIcon").removeClass('disableClick')
+              $('ion-item').show();
               document.getElementById( 'barLeaveIcon' ).style.opacity = '1';
 
               if(nummerGebruiker == ter){
