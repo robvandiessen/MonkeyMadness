@@ -17,13 +17,15 @@ De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps
 
 ### Firebase
 Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
+
 **https://cdn.firebase.com/js/client/2.2.1/firebase.js**
 
 
 ## Externe diensten 
 
 ### Firebase database
- De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
+ De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten. 
+ 
 **https://scorching-torch-6903.firebaseio.com/**
 
 ## Back-end
