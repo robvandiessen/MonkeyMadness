@@ -52,4 +52,4 @@ Tevens staan in dit script enkele functies die de juiste geluiden afspelen op de
 
 **index.js** In dit script is de structuur van de app vastgelegd. Functies die nodig zijn voor het functioneren van de app worden hier ook aangeroepen. 
 
-**mainfunctions.js** In dit script zijn enkele functies vastgelegd die bepaalde elementen hiden en showen op de momenten dat het nodig is.
+**mainFunctions.js** In dit script zijn enkele functies vastgelegd die bepaalde elementen hiden en showen op de momenten dat het nodig is.
