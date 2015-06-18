@@ -1,14 +1,7 @@
 # MonkeyMadness
-Met Monkey Madness zorg je voor wat leven 
+Met Monkey Madness zorg je voor wat leven in de brouwerij. De spreekwoorden “je staat voor aap” en “iemand anders na-apen” zijn bekende spreekwoorden. Het in de praktijk brengen maakt het echter nog veel leuker. 
 
-in de brouwerij. De spreekwoorden “je staat voor aap” en “iemand anders na-apen” zijn 
-
-bekende spreekwoorden. Het in de praktijk brengen maakt het echter nog veel leuker. Hoe 
-
-goed vertrouw jij je vrienden? Ben jij een echte gorilla die alles aan durft. Of heb je altijd een 
-
-grote mond, maar als je een opdracht uit moet voeren krabbel je terug?
-
+Hoe goed vertrouw jij je vrienden? Ben jij een echte gorilla die alles aan durft. Of heb je altijd een grote mond, maar als je een opdracht uit moet voeren krabbel je terug?
 
 ## Doel
 The main purpose of the Flurry Flakes app is to show how all relevant elements of a hybrid mobile app can be made to work. It requires the use of a Cordova plugin, loading data from an external service, communicating with a PHP back-end.
@@ -27,8 +20,7 @@ De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps
 **https://cdn.firebase.com/js/client/2.2.1/firebase.js**Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
 
 
-
-## External services
+## Externe diensten 
 ** https://scorching-torch-6903.firebaseio.com/ ** De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
 
 
