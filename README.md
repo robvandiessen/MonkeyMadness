@@ -14,15 +14,19 @@ Wat de app in het kort doet is:
 De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps worden gemaakt voor iOS en Android met behulp van: HTML, CSS en Javascript. Ionic richt zich vooral op de look en feel en UI interactie van de app. Het Framework vervangt dan ook niet PhoneGap of een ander Javascript Framework. Zelf ontwikkelde: HTML, CSS en Javascript is ook zonder problemen in Ionic te verwerken.
 
 ## Plugins
-**https://cdn.firebase.com/js/client/2.2.1/firebase.js**Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
+
+### Firebase
+Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
+**https://cdn.firebase.com/js/client/2.2.1/firebase.js**
 
 
 ## Externe diensten 
-**https://scorching-torch-6903.firebaseio.com/** De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
 
+### Firebase database
+ De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
+**https://scorching-torch-6903.firebaseio.com/**
 
 ## Back-end
-
 **maaklobby.js** Het javascript genereerd een lobby ID van 4 random cijfers. Doormiddel van Session storage wordt dit nummer opgeslagen en later weg geschreven in Firebase als een lobby.
 
 **joinlobby.js** Dit script maakt een invoerveld waar de 4 cijferige code van het gemaakte lobby kan invoeren. Via Session storage wordt dit nummer onthouden zodat het systeem weet in welke lobby hij de speler moet plaatsen.
