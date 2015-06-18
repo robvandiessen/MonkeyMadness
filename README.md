@@ -38,3 +38,9 @@ Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd
 Het script kiest een slachtoffer uit door het nummer van de speler te vergelijke met het lotnummer. Dit gaat doormiddel van een if statement. Als het nummer van de speler overeen komt met het lotnummer krijgt het slachtoffer een rood scherm te zien en zal worden verwezen naar het rad van schaamte. Anderen krijgen het zogenaamde veilig scherm te zien waar in ze moeten aangeven of de opdracht geslaagd is. 
 
 Ook kijkt het script of er een speler aanwezig is binnen de lobby. Firebase biet namelijk een functie aan die de aanwezigheid van een speler kan controleren. Dus als een speler het spel verlaat, wordt die uit de lobby weg geschreven.
+
+**wheel.js** Het Rad van schaamte wordt in dit script geanimeerd. Er wordt in het script een berekening gemaakt waar het rad op moet eindigen en welke opdracht het slachtoffer krijgt. De muziek in het scherm wordt hier ook afgespeeld.
+
+**opdrachten.js** Alle opdrachten die in de app voorkomen zijn in dit script verwerkt. Deze opdrachten zijn verdeeld onder 4 categorieën. Via het Rad van schaamte wordt de categorie bepaald. Dit script kiest onder deze categorie een random opdracht uit.
+
+**index.js** In dit script is de structuur van de app vastgelegd. Functies die nodig zijn voor het functioneren van de app worden hier ook aangeroepen 
