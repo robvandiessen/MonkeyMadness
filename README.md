@@ -4,8 +4,6 @@ Met Monkey Madness zorg je voor wat leven in de brouwerij. De spreekwoorden “j
 Hoe goed vertrouw jij je vrienden? Ben jij een echte gorilla die alles aan durft. Of heb je altijd een grote mond, maar als je een opdracht uit moet voeren krabbel je terug?
 
 ## Doel
-The main purpose of the Flurry Flakes app is to show how all relevant elements of a hybrid mobile app can be made to work. It requires the use of a Cordova plugin, loading data from an external service, communicating with a PHP back-end.
-
 Het hooft doel van Monkey Madness is amusement met je vrienden / vrienden te creëren en ze opdrachten te laten doen die buiten de comfort zone treden.
 Wat de app in het kort doet is:
 - Random slachtoffer kiezen binnen een vriendengroep.
