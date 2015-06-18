@@ -21,7 +21,7 @@ De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps
 
 
 ## Externe diensten 
-** https://scorching-torch-6903.firebaseio.com/ ** De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
+**https://scorching-torch-6903.firebaseio.com/** De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
 
 
 ## Back-end
