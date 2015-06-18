@@ -1,0 +1,214 @@
+/* REPSONSIVE CSS*/
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+
+
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #WheelContent
+    {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 300px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    #WheelContent
+    {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 300px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    #WheelContent
+    {
+        width:250px;
+        height: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 300px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    #WheelContent
+    {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 300px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+}
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    #WheelContent
+    {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 350px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+}
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    #WheelContent
+    {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .skills-wheel {
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+          height: 350px;
+          margin: 0 auto 2em;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          width: 100%;
+          display: block;
+    }
+
+}

@@ -293,8 +293,8 @@ body {
 
 #strookje
 {
-  width: 50%;
-  height: auto;
+  width: 250px;
+  height: 250px;
   position: relative;
   top: 50px;
   margin: 0 auto;
