@@ -1,7 +1,4 @@
-# Monkey Madness
-
-TODO: Write a project description
-
+# MonkeyMadness
 Met Monkey Madness zorg je voor wat leven 
 
 in de brouwerij. De spreekwoorden “je staat voor aap” en “iemand anders na-apen” zijn 
@@ -12,46 +9,35 @@ goed vertrouw jij je vrienden? Ben jij een echte gorilla die alles aan durft. Of
 
 grote mond, maar als je een opdracht uit moet voeren krabbel je terug?
 
-## Installation
 
-TODO: Describe the installation process
+## Doel
+The main purpose of the Flurry Flakes app is to show how all relevant elements of a hybrid mobile app can be made to work. It requires the use of a Cordova plugin, loading data from an external service, communicating with a PHP back-end.
 
-## Usage
+Het hooft doel van Monkey Madness is amusement met je vrienden / vrienden te creëren en ze opdrachten te laten doen die buiten de comfort zone treden.
+Wat de app in het kort doet is:
+- Random slachtoffer kiezen binnen een vriendengroep.
+- Geeft een opdracht met beschrijving door aan slachtoffer.
 
-TODO: Write usage instructions
+## UI
+De UI van de app is gemaakt met Ionic Framework. Met Ionic kan er eenvoudig apps worden gemaakt voor iOS en Android met behulp van: HTML, CSS en Javascript. Ionic richt zich vooral op de look en feel en UI interactie van de app. Het Framework is dan ook geen vervanging voor PhoneGap of een ander Javascript Framework. Zelf ontwikkelde: HTML, CSS en Javascript is ook zonder problemen in Ionic te verwerken.
 
-## Lotje trek systeem opzet
-Monkey Madness maakt gebruik van Firebase voor het vastleggen van de spelers binnen een lobby. Het lotje trek systeem kiest uit de aantal spelers binnen een lobby een speler die een opdracht moet uitvoeren. Deze gegevens worden opgeslagen in de Firebase locatie: https://scorching-torch-6903.firebaseio.com/
-Wanneer een speler een lobby betreed, wordt er op basis van de aantal spelers binnen de lobby een nummer toegewezen en deze wordt weg geschreven in de Firebase.
-Het systeem kiest een slachtoffer uit door een random nummer te kiezen tussen de 1 en aantal spelers binnen de lobby dit gaat doormiddel een if statement van javascript. 
-Als het speler nummer overeen komt met dit nummer krijgt die een rood scherm.
-Anderen spelers binnen de lobby krijgen een blauw scherm te zien waar ze aan geven of de opdracht geslaagd is.
+## Plugins
+**org.apache.cordova.device-motion** This plugin allows the app to read the accelerometer sensor. It is used to allow the user to navigate a list of cartoons by tilting the device. This could (but completely doens't) create a more natural way of navigating such lists.
 
-## Lobbys maken
-Wanneer een speler de app opstart kan er een lobby worden gemaakt of kan er aan een lobby worden deel genomen. Wanneer een speler een lobby aanmaakt wordt er via javascript functie een code met 4 cijfers gegenereerd.  Deze code moeten de anderen spelers invoeren die aan het spel willen deelnemen. Doormiddel van Session storage wort deze code onthouden en zo later weg geschreven in Firebase die van deze code een lobby aan maakt. Wanneer er lootjes zijn getrokken  is wordt er de speler tijdelijk uit de lobby en Firebase verwijderd. Wanneer een speler aangegeeft om weer deel te nemen met een nieuwspel zal die weer in de lobby worden geplaatst. Omdat lobby code nog in de session storage aan wezig is weet het systeem welke lobby de speler geplaats moet worden. 
-
-##Stemmen.
-Wanneer het slachtoffer een opdracht heeft gedaan kunnen de anderen spelers aangeven of de opdracht is voltooit. Deze spelers worden tijdelijk uit de lobby gezet. Als een speler aangeeft dat de opdracht is voltooit zal deze meedoen aan de volgen de ronden. Als alle anderen speler die opdracht niet geslaagd vinden zal het slachtoffer de lobby alleen moeten betreden om zo weer een rood scherm te krijgen
-
-## Wiel van schaamte
+**https://cdn.firebase.com/js/client/2.2.1/firebase.js**Firebase biedt een API aan om data te syncen in realtime. Wanneer data veranderd wordt deze over de hele app en apparaat geüpdate.
 
 
-## Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## External services
+** https://scorching-torch-6903.firebaseio.com/ ** De lobbys, spelers en lot nummers worden extern opgeslagen in Firebase. Firebase wordt gebruikt omdat het makkelijk en snel een database kan op zetten.  
 
-## History
 
-TODO: Write history
+## Back-end
 
-## Credits
+**maaklobby.js** Het javascript genereerd een lobby ID van 4 random cijfers. Doormiddel van Session storage wordt dit nummer opgeslagen en later weg geschreven in Firebase als een lobby.
 
-TODO: Write credits
+**joinlobby.js** Dit script maakt een invoer veld aan waar de 4 cijferige code van het gemaakte lobby kan invoeren. Via Session storage wordt dit nummer onthouden zodat het systeem weet in welke lobby hij de speler moet plaatsen.
 
-## License
-
-TODO: Write license
+**eesteLot.js** Dit is de backbone van de app. Als een speler een lobby maakt of deelneemt wordt er in dit script de lobby en de speler verwerkt in Firebase. Het script geeft de speler ook een uniek nummer die nodig is om een slachtoffer te kiezen. Dit nummer wordt gegenereerd met het aantal spelers binnen een lobby. Het totaal aantal spelers wordt opgeteld en een random nummer gegenereerd. Dit lotnummer moet bepalen wie van de spelers het slachtoffer is. Al deze gegevens worden opgeslagen in Firebase.  
+Het script kiest een slachtoffer uit door het nummer van de speler te vergelijke met het lotnummer. Dit gaat doormiddel van een if statement. Als de speler nummer overeen komt met het lotnummer krijgt het slachtoffer een rood scherm te zien. Anderen krijgen het zogenaamde veilig scherm te zien waar in ze moeten aangeven of de opdracht geslaagd is. 
+Ook kijkt het script of er een speler aanwezig is binnen de lobby. Firebase biet namelijk een functie aan die de aanwezigheid van een speler kan controleren. Dus als een speler het spel verlaat, wordt uit de lobby weg geschreven.
